@@ -1,0 +1,64 @@
+/* Professional Numerology Calculator Styles */
+
+.glow {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+}
+
+.result-digit {
+    font-size: 4rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: pulse 2s infinite;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.card {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-header {
+    position: relative;
+    padding-left: 20px;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .result-digit {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+    }
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Pre formatting for calculation results */
+.calculation-result {
+    white-space: pre-line;
+    font-family: inherit;
+}
